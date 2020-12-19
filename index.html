@@ -1,17 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="Description" content="More Vitality"> <!-- Important for the Google Results-->
-    <meta name="robots" content="index,follow"> <!--Access for the positioning robots in the Google Results-->
+    <meta name="robots" content="index,follow">
+    <!--Access for the positioning robots in the Google Results-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
+    <link rel="stylesheet" href="./assets/components/styles.css ">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <div class="header__menu">
+            <div class="container__menu">
+                <div class="menu__logo">
+                    <a href="#home">
+                        <img src="./assets/static/vitalityLogoMenu.png" alt="">
+                    </a>
+                </div>
+                <div class="menu__options">
+                    <nav>
+                        <ul class="menu__nav">
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#About">About</a>
+                            </li>
+                            <li>
+                                <a href="#About">About</a>
+                            </li>
+                            <li>
+                                <a href="#About">About</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
             
         </div>
     </header>
+    <main>
+        <section>
+            <div class="mainSlider">
+                <ul class="sliders">
+                    <li class="sliders__item1">
+                        <img src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg" alt="firstImage">
+                        <div class="sliders__caption">
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                        </div>
+                    </li>
+                    <li class="sliders__item2">
+                        <img src="https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg" alt="secondImage">
+                        <div class="sliders__caption">
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                        </div>
+                    </li>
+                    <li class="sliders__item3">
+                        <img src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg" alt="thridImage">
+                        <div class="sliders__caption">
+                            <h1>Lorem ipsum dolor sit amet.</h1>
+                        </div>
+                    </li>
+                </ul>
+        
+                <ul class="sliders-flex">
+                    <li>
+                        <a class="flex__left" href="#">
+                            <img src="./assets/static/vitality-arrowLeft.png" alt="Flex Left">
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex__right" href="#">
+                            <img src="./assets/static/vitality-arrowRight.png" alt="Flex Right">
+                        </a>
+                    </li>
+        
+                </ul>
+            </div>
+        </section>
+        
+    
+        <section id="about">
+            <div class="about__container">
+                <div class="about__description">
+                    <h1 class="description__title">About</h1>
+                    <p class="description__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure, culpa ipsam facere molestiae tempore cupiditate praesentium aliquid, similique nulla expedita quod accusamus quam in nesciunt beatae quibusdam doloremque rem. Aspernatur minus tempore ipsam quidem, harum, dolor quos nam perspiciatis voluptatum doloremque error earum, illo repudiandae doloribus! Ipsum, culpa ea?</p>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a href="#">Terminos de uso</a>
+        <a href="#">Declaración de privacidad</a>
+        <a href="#">Centro de ayuda</a>
+    </footer>
+
 </body>
+
 </html>
