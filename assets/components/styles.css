@@ -202,6 +202,12 @@ body{
     /* flex-wrap: wrap; */
 }
 
+@media screen and (max-width: 960px) {
+    .about__bio {
+        flex-wrap: wrap;
+    }
+}
+
 .bio__fig {
     align-self: center;
     margin: 0 20px;
