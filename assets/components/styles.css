@@ -137,8 +137,8 @@ body{
 } */
 
 .sliders-flex img{
-    height: 80px;
-    width: 40px;
+    height: 60px;
+    width: 30px;
 }
 
 .flex__left{
@@ -154,11 +154,11 @@ body{
 }
 
 .mainSlider:hover .flex__left {
-    transform: translate3d(45px,0,0);
+    transform: translate3d(50px,0,0);
 }
 
 .mainSlider:hover .flex__right {
-    transform: translate3d(-50px,0,0);
+    transform: translate3d(-55px,0,0);
 }
 
 .about__container {
@@ -166,13 +166,18 @@ body{
     position: relative;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 40px;
+    border-bottom: 3px solid rgb(194, 192, 192);
 }
 
 .about__description {
+    width: 60%;
+    margin-bottom: 40px;
     align-self: center;
     display: flex;
     flex-direction: column;
-    width: 60%;
+
+    
 }
 
 .description__title {
@@ -183,10 +188,96 @@ body{
 
 .description__paragraph {
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 40px;
 }
 
+.about__bio{
+    width: 70%;
+    margin-bottom: 40px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+
+.bio__fig {
+    align-self: center;
+    margin: 0 20px;
+}
+
+.bio__fig img{
+    width: 200px;
+}
+
+.bio__story {
+    align-self: center;
+    margin: 20px 20px;
+    text-align: justify;
+}
+
+.about__us {
+    width: 70%;
+    margin-bottom: 40px;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.us__example {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+
+.us__example img{
+    width: 280px;
+}
+
+.example__title{
+    text-align: center;
+}
+
+.example__paragraph{
+    text-align: center;
+}
+
+.example__social {
+    width: 30%;
+    margin: 10px 0;
+    align-self: center;
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid  rgb(194, 192, 192);
+    border-bottom: 1px solid  rgb(194, 192, 192); 
+
+}
+
+.example__social img {
+    width: 25px;
+    height: 25px;
+}
+
+.social__face {
+    margin: 5px 10px;
+    width: 25px;
+    height: 25px;
+}
+
+.social__insta {
+    margin: 5px 10px;
+    width: 25px;
+    height: 25px;
+}
 
 .footer{
     background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,1) 100% );
@@ -209,3 +300,4 @@ body{
 .footer a:hover{
     text-decoration: underline;
 }
+
