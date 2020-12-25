@@ -90,14 +90,14 @@ body{
 @media screen and (max-width: 800px) {
 
     .container__menu{
-        width: 420px;
+        width: 360px;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
     .menu__logo {
-        width: 420px;
+        width: 360px;
     }
 
     .menu__options {
