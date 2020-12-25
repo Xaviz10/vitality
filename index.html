@@ -7,7 +7,7 @@
     <meta name="robots" content="index,follow">
     <!--Access for the positioning robots in the Google Results-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>More Vitality</title>
     <link rel="stylesheet" href="./assets/components/styles.css ">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
@@ -24,7 +24,10 @@
                 </div>
                 <div class="menu__options">
                     <nav>
-                        <ul class="menu__nav">
+                        <a class="menu__button" id="hamBtn" href="#" onclick="hamMenu()">
+                            <img src="./assets/static/icon-menu.png" alt="Menu">
+                        </a>
+                        <ul class="menu__nav" id="menu-nav">
                             <li>
                                 <a href="#about">About</a>
                             </li>
@@ -35,61 +38,65 @@
                                 <a href="#services">Services</a>
                             </li>
                             <li>
-                                <a href="#About">Contacts</a>
+                                <a href="#contacts">Contacts</a>
                             </li>
                         </ul>
                     </nav>
                 </div>
             </div>
-            
+
         </div>
     </header>
     <main>
         <section>
             <div class="mainSlider">
                 <ul class="sliders">
-                    <li class="sliders__item1">
+                    <li class="sliders__item sliders__item--fadding">
                         <img src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg" alt="firstImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <h1>Lorem ipsum dolor sit amet11111.</h1>
                         </div>
                     </li>
-                    <li class="sliders__item2">
+                    <li class="sliders__item sliders__item--fadding">
                         <img src="https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg" alt="secondImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <h1>Lorem ipsum dolor sit amet222222.</h1>
                         </div>
                     </li>
-                    <li class="sliders__item3">
+                    <li class="sliders__item sliders__item--fadding">
                         <img src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg" alt="thridImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet.</h1>
+                            <h1>Lorem ipsum dolor sit amet333333.</h1>
                         </div>
                     </li>
                 </ul>
-        
+
                 <ul class="sliders-flex">
                     <li>
-                        <a class="flex__left" href="#">
+                        <a class="flex__left" onclick="plusDivs(-1)">
                             <img src="./assets/static/vitality-arrowLeft.png" alt="Flex Left">
                         </a>
                     </li>
                     <li>
-                        <a class="flex__right" href="#">
+                        <a class="flex__right" onclick="plusDivs(+1)">
                             <img src="./assets/static/vitality-arrowRight.png" alt="Flex Right">
                         </a>
                     </li>
-        
+
                 </ul>
             </div>
         </section>
-        
-    
+
+
         <section id="about">
             <div class="about__container">
                 <div class="about__description">
-                    <h1 class="description__title">About</h1>
-                    <p class="description__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur iure, culpa ipsam facere molestiae tempore cupiditate praesentium aliquid, similique nulla expedita quod accusamus quam in nesciunt beatae quibusdam doloremque rem. Aspernatur minus tempore ipsam quidem, harum, dolor quos nam perspiciatis voluptatum doloremque error earum, illo repudiandae doloribus! Ipsum, culpa ea?</p>
+                    <h1 class="description__title">ABOUT</h1>
+                    <p class="description__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Aspernatur iure, culpa ipsam facere molestiae tempore cupiditate praesentium aliquid, similique
+                        nulla expedita quod accusamus quam in nesciunt beatae quibusdam doloremque rem. Aspernatur minus
+                        tempore ipsam quidem, harum, dolor quos nam perspiciatis voluptatum doloremque error earum, illo
+                        repudiandae doloribus! Ipsum, culpa ea?</p>
                 </div>
                 <div class="about__bio">
                     <div class="bio__fig">
@@ -97,15 +104,22 @@
                     </div>
 
                     <div class="bio__story">
-                        <p class="story__paragraph">Las enfermedades crónicas motivan el 80% de las consultas de Atención Primaria, en su mayoría prevenibles. Por lo que  nace la necesidad de educar a la comunidad en general sobre hábitos de vida saludable que incluyan: buena alimentación, ejercicio regular e higiene del sueño.
-                            Cindy Gamboa, médica con más de 5 años de experiencia en el desarrollo de programas de seguimiento y control a pacientes con enfermedades crónicas como hipertensión arterial, diabetes y obesidad, basándose en el entorno ocupacional y familiar de cada paciente.</p>
+                        <p class="story__paragraph">Las enfermedades crónicas motivan el 80% de las consultas de
+                            Atención Primaria, en su mayoría prevenibles. Por lo que nace la necesidad de educar a la
+                            comunidad en general sobre hábitos de vida saludable que incluyan: buena alimentación,
+                            ejercicio regular e higiene del sueño.
+                            Cindy Gamboa, médica con más de 5 años de experiencia en el desarrollo de programas de
+                            seguimiento y control a pacientes con enfermedades crónicas como hipertensión arterial,
+                            diabetes y obesidad, há desarrollado sistema de orientación priorizando el entorno
+                            ocupacional y familiar de cada paciente.</p>
                     </div>
                 </div>
 
                 <div class="about__us">
                     <div class="us__example">
                         <div class="example__fig">
-                            <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg" alt="Example 1">
+                            <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg"
+                                alt="Example 1">
                         </div>
                         <div class="example__descripton">
                             <h1 class="example__title">Lorem.</h1>
@@ -114,12 +128,14 @@
                         <div class="example__social">
                             <div class="social__face">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png" alt="Facebook">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png"
+                                        alt="Facebook">
                                 </a>
                             </div>
                             <div class="social__insta">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png" alt="Instagram">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"
+                                        alt="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -136,12 +152,14 @@
                         <div class="example__social">
                             <div class="social__face">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png" alt="Facebook">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png"
+                                        alt="Facebook">
                                 </a>
                             </div>
                             <div class="social__insta">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png" alt="Instagram">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"
+                                        alt="Instagram">
                                 </a>
                             </div>
                         </div>
@@ -149,7 +167,8 @@
 
                     <div class="us__example">
                         <div class="example__fig">
-                            <img src="https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg" alt="Example 3">
+                            <img src="https://images.pexels.com/photos/3756523/pexels-photo-3756523.jpeg"
+                                alt="Example 3">
                         </div>
                         <div class="example__descripton">
                             <h1 class="example__title">Lorem.</h1>
@@ -158,37 +177,43 @@
                         <div class="example__social">
                             <div class="social__face">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png" alt="Facebook">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook-circled.png"
+                                        alt="Facebook">
                                 </a>
                             </div>
                             <div class="social__insta">
                                 <a href="#">
-                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png" alt="Instagram">
+                                    <img src="https://img.icons8.com/ios-filled/50/000000/instagram.png"
+                                        alt="Instagram">
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
         </section>
 
         <section id="background">
             <div class="background__container">
-                <h2 class="background__title">Background</h2>
+                <h2 class="background__title">BACKGROUND</h2>
                 <div class="background__info">
                     <div class="background__details">
                         <h1 class="details__first-question">What Lorem ipsum dolor sit.?</h1>
                         <h2 class="details__second-question"> Or What Lorem ipsum dolor sit amet.?</h2>
-                        <p class="details__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis provident cum voluptas ullam. Explicabo, deserunt, perspiciatis voluptate aspernatur minima at est cupiditate excepturi assumenda quidem expedita impedit voluptatem eius corporis.</p>
+                        <p class="details__paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                            Perspiciatis provident cum voluptas ullam. Explicabo, deserunt, perspiciatis voluptate
+                            aspernatur minima at est cupiditate excepturi assumenda quidem expedita impedit voluptatem
+                            eius corporis.</p>
                     </div>
 
                     <div class="background__fig">
                         <a href="#">
-                            <img src="https://images.pexels.com/photos/4913769/pexels-photo-4913769.jpeg" alt="background image">
+                            <img src="https://images.pexels.com/photos/4913769/pexels-photo-4913769.jpeg"
+                                alt="background image">
                         </a>
                     </div>
-    
+
                 </div>
             </div>
         </section>
@@ -203,53 +228,141 @@
 
         <section id="services">
             <div class="services__container">
-                <h2 class="services__title">Our Services</h2>
+                <h2 class="services__title">OUR SERVICES</h2>
                 <div class="services__info">
                     <div class="services__element">
                         <h3 class="element__title">
                             <span><img src="https://img.icons8.com/ios-filled/50/000000/apple-health.png" alt=""></span>
                             Service 1
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
                             <span><img src="https://img.icons8.com/ios-filled/50/000000/health-graph.png" alt=""></span>
                             Service 2
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
-                            <span><img src="https://img.icons8.com/ios-filled/50/000000/mental-health.png" alt=""></span>
+                            <span><img src="https://img.icons8.com/ios-filled/50/000000/mental-health.png"
+                                    alt=""></span>
                             Service 3
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
                             <span><img src="https://img.icons8.com/ios-filled/50/000000/fit.png" alt=""></span>
                             Service 4
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
-                            <span><img src="https://img.icons8.com/material/24/000000/meditation-guru.png" alt=""></span>
+                            <span><img src="https://img.icons8.com/material/24/000000/meditation-guru.png"
+                                    alt=""></span>
                             Service 5
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
-                            <span><img src="https://img.icons8.com/ios-filled/50/000000/bitten-apple--v2.png" alt=""></span>
+                            <span><img src="https://img.icons8.com/ios-filled/50/000000/bitten-apple--v2.png"
+                                    alt=""></span>
                             Service 6
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
+                            maiores aliquid eum distinctio et, dolorum enim?</p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="mind" class="mind-section">
+            <div class="mind__container">
+                <div class="mind__flex">
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts">
+            <div class="contacts__container">
+                <h2 class="contacts__title">CONTACTS</h2>
+
+                <div class="contacts__info">
+                    <div class="contacts__direct">
+                        <h3 class="direct__title">Direct Contact</h3>
+                        <p class="direct__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                            reprehenderit.</p>
+                        <ul>
+                            <li>
+                                Method 1:
+                                <span>Lorem, ipsum dolor.</span>
+                            </li>
+                            <li>
+                                Method 1:
+                                <span>Lorem, ipsum dolor.</span>
+                            </li>
+                            <li>
+                                Method 1:
+                                <span>Lorem, ipsum dolor.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__form">
+                        <h3 class="form__title">
+                            Contactanos
+                        </h3>
+                        <p class="form__description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Eveniet, dicta magnam veniam illo et enim pariatur,
+                            mollitia blanditiis repudiandae reprehenderit aspernatur
+                            veritatis perspiciatis maiores vitae.
+                        </p>
+
+                        <form action="" id="UserMessage">
+                            <p>
+                                <label for="Name">
+                                    <span>Name: </span>
+                                    <input type="text" name="name" id="name" required />
+                                </label>
+                            </p>
+
+                            <p>
+                                <label for="Email">
+                                    <span>Email: </span>
+                                    <input type="email" name="email" id="email" required />
+                                </label>
+                            </p>
+                            <p>
+                                <label for="Subject">
+                                    <span>Subject: </span>
+                                    <input type="text" name="subject" id="subject" />
+                                </label>
+                            </p>
+                            <p>
+                                <label for="Message">
+                                    <span>Message: </span>
+                                    <textarea name="message" id="Message" cols="1" rows="10" form="UserMessage"
+                                        placeholder=""></textarea>
+                                </label>
+                            </p>
+                            <input type="submit" value="send">
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
     </main>
 
     <footer class="footer">
@@ -258,6 +371,75 @@
         <a href="#">Centro de ayuda</a>
     </footer>
 
+
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+
+        function plusDivs(n) {
+            showDivs(slideIndex += n);
+        }
+
+        function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("sliders__item");
+            if (n > x.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex - 1].style.display = "block";
+            setTimeout(showDivs(n), 5000);
+
+        }
+    </script>
+
+    <script>
+
+        function hamMenu() {
+            var j;
+            var nav = document.getElementById("menu-nav");
+            console.log(nav);
+
+            if (nav.className === "menu__nav") {
+                nav.className += " responsive";
+            } else {
+                nav.className = "menu__nav";
+            }
+
+            // if (item[0].style.display === "none") {
+            //     nav[0].style.height = "auto";
+            //     for (j = 0; j < item.length; j++) {
+            //         console.log(item[j])
+            //         item[j].style.display = "block";
+            //     }
+            // } else {
+            //     nav[0].style.height = "0";
+            //     for (j = 0; j < item.length; j++) {
+            //         item[j].style.display = "none";
+            //     }
+            // }
+            // if (item.className)
+        }
+    </script>
+    <!-- <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("sliders__item");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+
+            setTimeout(carousel, 5000);
+        }
+    </script> -->
 </body>
 
 </html>
