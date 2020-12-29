@@ -9,7 +9,7 @@ body{
     margin: 0px;
     background-color: white;
     font-family: 'Dosis', sans-serif;
-}  
+}
 
 .header {
     position: fixed;
@@ -69,6 +69,10 @@ body{
 .menu__nav a {
     text-decoration: none;
     color: black;
+}
+
+.menu__nav a:hover {
+    font-weight: bold;
 }
 
 .menu__nav li{
@@ -189,24 +193,6 @@ body{
 	from {opacity: .5}
 	to {opacity: 1}
 }
-/* .sliders__caption h1{
-    font-weight: 250;
-}
-
-.sliders__item1{
-    display: none;
-    width: 100%;
-}
-
-.sliders__item2{
-    display: block;
-    width: 100%;
-}
-
-.sliders__item3{
-    display: none;
-    width: 100%;
-} */
 
 .sliders-flex{
     width: 100%;
@@ -282,6 +268,7 @@ body{
     position: relative;
     flex-direction: column;
     justify-content: center;
+    padding: 30px 0;
     margin-bottom: 40px;
     border-bottom: 3px solid rgb(235, 234, 234);
 }
@@ -301,6 +288,10 @@ body{
     margin: 40px 0;
 }
 
+.description__title img {
+    width: 280px;
+}
+
 .description__paragraph {
     text-align: center;
     font-size: 16px;
@@ -316,6 +307,8 @@ body{
     justify-content: center;
     /* flex-wrap: wrap; */
 }
+
+
 
 .bio__fig {
     align-self: center;
@@ -333,6 +326,11 @@ body{
     text-align: justify;
 }
 
+.story__title {
+    margin: 10px 0;
+    text-align: left;
+}
+
 @media screen and (max-width: 1100px) {
     .about__bio {
         flex-wrap: wrap;
@@ -341,7 +339,13 @@ body{
     .bio__story {
         margin: 20px 0;
     }
+
+    .story__title {
+        text-align: center;
+    }
 }
+
+
 
 .about__us {
     width: 70%;
@@ -362,6 +366,8 @@ body{
 
 .us__example img{
     width: 310px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .example__title{
@@ -411,6 +417,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px 0;
     /* margin-bottom: 40px;
     border-bottom: 3px solid rgb(235, 234, 234); */
 
@@ -509,6 +516,8 @@ body{
     justify-content: center;
     align-items: center;
     margin: 40px 0;
+    padding: 30px 0;
+
 }
 
 .services__title {
@@ -516,6 +525,10 @@ body{
     text-align: center;
     margin: 10px 0;
 
+}
+
+.services__title img {
+    width: 280px;
 }
 
 .services__info {
@@ -592,7 +605,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 3px solid rgb(235, 234, 234);
 }
 
 .contacts__title {
@@ -600,6 +614,10 @@ body{
     text-align: center;
     margin: 20px 0;
 
+}
+
+.contacts__title img {
+    width: 150px;
 }
 
 .contacts__info {
@@ -614,7 +632,7 @@ body{
     position: relative;
     margin: 10px 0;
     margin-right: 20px;
-    text-align: justify;
+    /* text-align: justify; */
     
 
 }
@@ -632,6 +650,10 @@ body{
     color: gray;
 }
 
+.direct__paragraph {
+    margin: 10px 0;
+}
+
 .contacts__form {
     position: relative;
     display: flex;
@@ -641,9 +663,10 @@ body{
 
 }
 
-/* .contacts__form p {
+.form__description{
     margin: 10px 0;
-} */
+}
+
 .contacts__form label {
     display: flex;
     flex-direction: column;
@@ -653,6 +676,7 @@ body{
 }
 
 .contacts__form span {
+    margin-top: 5px;
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
@@ -660,7 +684,6 @@ body{
 }
 
 .contacts__form input {
-    margin: 10px 0;
     font-size: 18px;
     max-width: 700px;
     padding: 5px;
@@ -668,7 +691,6 @@ body{
 
 }
 .contacts__form textarea {
-    margin: 10px 0;
     font-size: 18px;
     max-width: 700px;
     height: 200px;
@@ -685,17 +707,63 @@ body{
 
 }
 
-.footer{
+
+
+.footer__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 20px 0; */
+} 
+
+.footer__top {
+    position: relative;
+    width: 80%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-bottom: 20px;
+}
+
+.footer__motivation {
+    justify-self: flex-start;
+}
+
+.social__links {
+    list-style-type: none;
+}
+
+.social__links li {
+    margin: 10px 0;
+}
+
+.social__links a{
+    text-decoration: none;
+    color: gray;
+}
+
+.social__links a:hover{
+    text-decoration: underline;
+}
+
+.footer__bottom {
     background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,1) 100% );
     position: relative;
+    width: 80%;
     display: flex;
     align-items: center;
-    height: 100px;
+    justify-content: center;
+    height: 40px;
     width: 100%;
 
 }
 
-.footer a{
+.footer__bottom a{
     color: black;
     cursor: pointer;
     font-size: 14px;
@@ -703,7 +771,7 @@ body{
     text-decoration: none;
 }
 
-.footer a:hover{
+.footer__bottom a:hover{
     text-decoration: underline;
 }
 
