@@ -293,7 +293,7 @@ body{
 }
 
 .description__paragraph {
-    text-align: center;
+    text-align: justify;
     font-size: 16px;
     margin-bottom: 40px;
 }
@@ -366,7 +366,7 @@ body{
 
 .us__example img{
     width: 310px;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
 }
 
@@ -411,35 +411,42 @@ body{
     height: 25px;
 }
 
-.background__container {
+.discover__container {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 30px 0;
+    padding: 10px 0;
     /* margin-bottom: 40px;
     border-bottom: 3px solid rgb(235, 234, 234); */
 
 }
 
-.background__title {
+.discover__title {
     width: 80%;
-    text-align: left;
+    text-align: center;
+    margin: 20px auto;
 }
 
-.background__info {
+.discover__title img {
+    width: 160px;
+}
+
+.discover__info {
     width: 80%;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     margin: 10px 0;
+
 }
 
-.background__details {
-    width: 400px;
-    /* margin: 0 10px; */
+.discover__details {
+    position: relative;
+    width: 480px;
+    margin: 10px 40px 10px 0;
     justify-self: flex-start;
     display: flex;
     flex-direction: column;
@@ -447,15 +454,15 @@ body{
 
 
 .details__first-question {
-    /* margin-bottom: 10px; */
-    font-size: 28px;
+    margin-bottom: 2px;
+    font-size: 34px;
     font-weight: 400;
     font-variant: small-caps;
 }
 
 .details__second-question {
-    margin-bottom: 10px;
-    font-size: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
     /* font-size: 24px;  */
     /* font-weight: 400; */
     /* font-variant: small-caps; */
@@ -465,26 +472,44 @@ body{
     text-align: justify;
 }
 
-.background__fig {
-    /* position: relative; */
-    float: right;
-    margin: 20px 20px;
+.discover__fig {
+    margin: 40px 40px;
 }
 
-.background__fig img{
-    /* width: 100%; */
-    width: 350px;
-    height: 280px;
+.discover__fig a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.discover__fig img{
+    width: 450px;
 }
 
 @media screen and (max-width: 900px) {
 
-    .background__info {
-        justify-content: center;
+    .discover__info {
         flex-wrap: wrap;
     }
 
-    .background__fig img{
+    .discover__details {
+        margin: 10px 0;
+        width: 100%;
+    }
+
+    .details__first-question {
+        text-align: center;
+    }
+    
+    .details__second-question {
+        text-align: center;
+    }
+
+    .discover__fig{
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    .discover__fig img{
         width: 100%;
         height: auto;
     }
@@ -606,7 +631,7 @@ body{
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    border-bottom: 3px solid rgb(235, 234, 234);
+    /* border-bottom: 3px solid rgb(235, 234, 234); */
 }
 
 .contacts__title {
@@ -710,12 +735,14 @@ body{
 
 
 .footer__container {
+    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,1) 100% );
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding-top: 20px;
     /* padding: 20px 0; */
 } 
 
@@ -726,12 +753,27 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: stretch;
+    /* align-items: center; */
     margin-bottom: 20px;
 }
 
 .footer__motivation {
+    width: 300px;
+    margin: 0 20px;
     justify-self: flex-start;
+}
+
+.motivation__title {
+    margin-bottom: 10px;
+}
+
+.footer__social {
+    width: 300px;
+    margin: 0 20px;
+}
+
+.social__title {
+    margin-bottom: 10px;
 }
 
 .social__links {
@@ -751,8 +793,18 @@ body{
     text-decoration: underline;
 }
 
+.footer__contacts {
+    width: 300px;
+    margin: 0 20px;
+}
+
+.contacts-footer__title {
+    margin-bottom: 10px;
+}
+
 .footer__bottom {
-    background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, rgba(255,255,255,1) 100% );
+    background: linear-gradient(to bottom, rgba(168, 168, 168,0) 0%, rgb(107, 107, 107) 100% );
+    margin-top: 20px;
     position: relative;
     width: 80%;
     display: flex;
@@ -764,7 +816,7 @@ body{
 }
 
 .footer__bottom a{
-    color: black;
+    color: white;
     cursor: pointer;
     font-size: 14px;
     padding-left: 30px;
