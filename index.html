@@ -52,26 +52,43 @@
             <div class="mainSlider">
                 <ul class="sliders">
                     <li class="sliders__item sliders__item--fadding">
-                        <img src="https://images.pexels.com/photos/1128678/pexels-photo-1128678.jpeg" alt="firstImage">
+                        <img src="./assets/static/vitality-sliders-food.jpg" alt="firstImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet11111.</h1>
+                            <h1>
+                                La  
+                                <span class="caption__word">
+                                    persistencia
+                                </span>
+                                realiza lo imposible
+                            </h1>
                         </div>
                     </li>
                     <li class="sliders__item sliders__item--fadding">
-                        <img src="https://images.pexels.com/photos/669578/pexels-photo-669578.jpeg" alt="secondImage">
+                        <img src="./assets/static/vitality-sliders-bed.jpg" alt="secondImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet222222.</h1>
+                            <h1>
+                                <span class="caption__word">
+                                    Equilibrio
+                                </span>
+                                es saber dosificar el descanso con trabajo
+                            </h1>
                         </div>
                     </li>
                     <li class="sliders__item sliders__item--fadding">
-                        <img src="https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg" alt="thridImage">
+                        <img src="./assets/static/vitality-sliders-fit.jpg" alt="thridImage">
                         <div class="sliders__caption">
-                            <h1>Lorem ipsum dolor sit amet333333.</h1>
+                            <h1>
+                                No hay nada que no puedas hacer, si tienes los
+                                <span class="caption__word">
+                                    hábitos
+                                </span>
+                                correctos
+                            </h1>
                         </div>
                     </li>
                 </ul>
 
-                <ul class="sliders-flex">
+                <!-- <ul class="sliders-flex">
                     <li>
                         <a class="flex__left" onclick="plusDivs(-1)">
                             <img src="./assets/static/vitality-arrowLeft.png" alt="Flex Left">
@@ -83,7 +100,7 @@
                         </a>
                     </li>
 
-                </ul>
+                </ul> -->
             </div>
         </section>
 
@@ -436,24 +453,40 @@
 
 
     <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
+        // var slideIndex = 1;
+        // showDivs(slideIndex);
 
-        function plusDivs(n) {
-            showDivs(slideIndex += n);
-        }
+        // function plusDivs(n) {
+        //     showDivs(slideIndex += n);
+        // }
 
-        function showDivs(n) {
+        // function showDivs(n) {
+        //     var i;
+        //     var x = document.getElementsByClassName("sliders__item");
+        //     if (n > x.length) { slideIndex = 1 }
+        //     if (n < 1) { slideIndex = x.length }
+        //     for (i = 0; i < x.length; i++) {
+        //         x[i].style.display = "none";
+        //     }
+        //     x[slideIndex - 1].style.display = "block";
+        //     setTimeout(showDivs(n), 5000);
+
+        // }
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
             var i;
             var x = document.getElementsByClassName("sliders__item");
-            if (n > x.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = x.length }
             for (i = 0; i < x.length; i++) {
                 x[i].style.display = "none";
-            }
-            x[slideIndex - 1].style.display = "block";
-            setTimeout(showDivs(n), 5000);
 
+            }
+            myIndex++;
+            if (myIndex > x.length) { myIndex = 1 }
+            x[myIndex - 1].style.display = "block";
+
+            setTimeout(carousel, 5000);
         }
     </script>
 
