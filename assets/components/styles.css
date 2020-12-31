@@ -78,15 +78,23 @@ body{
 
 .menu__nav a {
     text-decoration: none;
+    font-size: 18px;
     color: black;
 }
 
 .menu__nav a:hover {
+    font-family: 'AmazingKids','Dosis', sans-serif;
+    letter-spacing: 5px;
     font-weight: bold;
 }
 
 .menu__nav li{
-    padding: 10px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+    /* text-align: center; */
     font-size: 18px;
 }
 
@@ -135,15 +143,25 @@ body{
         display: none;
 
     }
-}
 
-@media screen and (max-width: 800px) {
+    .menu__nav li{
+        width: 100%;
+        /* justify-content: flex-start; */
+        padding: 10px 15px;
+    }
+    
+    .menu__nav a{
+        width: 100%;
+    }
+
     .menu__nav.responsive {
         height: auto;
         display: flex;
         flex-direction: column;
     }
 }
+
+
 
 .mainSlider {
     position: relative;
@@ -296,9 +314,8 @@ body{
     position: relative;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 0;
-    margin-bottom: 40px;
-    border-bottom: 3px solid rgb(235, 234, 234);
+    padding-top: 60px;
+
 }
 
 .about__description {
@@ -445,9 +462,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 10px 0;
-    /* margin-bottom: 40px;
-    border-bottom: 3px solid rgb(235, 234, 234); */
+    padding: 60px 0;
+    border-top: 3px solid rgb(235, 234, 234);
 
 }
 
@@ -568,15 +584,15 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 40px 0;
-    padding: 30px 0;
+    /* margin: 40px 0; */
+    padding: 60px 0;
 
 }
 
 .services__title {
     width: 80%;
     text-align: center;
-    margin: 10px 0;
+    margin: 40px 0;
 
 }
 
@@ -658,6 +674,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 60px 0;
     margin-bottom: 40px;
     /* border-bottom: 3px solid rgb(235, 234, 234); */
 }
@@ -665,7 +682,7 @@ body{
 .contacts__title {
     width: 80%;
     text-align: center;
-    margin: 20px 0;
+    margin: 40px 0;
 
 }
 

@@ -29,16 +29,24 @@
                         </a>
                         <ul class="menu__nav" id="menu-nav">
                             <li>
-                                <a href="#about">Acerca</a>
+                                <a href="#about" onclick="hamMenu_itemClick()">
+                                    Acerca
+                                </a>
                             </li>
                             <li>
-                                <a href="#discover">Descubre</a>
+                                <a href="#discover" onclick="hamMenu_itemClick()">
+                                    Descubre
+                                </a>
                             </li>
                             <li>
-                                <a href="#services">Servicios</a>
+                                <a href="#services" onclick="hamMenu_itemClick()">
+                                    Servicios
+                                </a>
                             </li>
                             <li>
-                                <a href="#contacts">Contactos</a>
+                                <a href="#contacts" onclick="hamMenu_itemClick()">
+                                    Contactos
+                                </a>
                             </li>
                         </ul>
                     </nav>
@@ -147,8 +155,8 @@
                                 alt="Example 1">
                         </div>
                         <div class="example__descripton">
-                            <h1 class="example__title">Lorem.</h1>
-                            <p class="example__paragraph">Lorem, ipsum.</p>
+                            <h1 class="example__title">Salud</h1>
+                            <p class="example__paragraph">Adopta un estilo de vida saludable.</p>
                         </div>
                         <div class="example__social">
                             <div class="social__face">
@@ -172,8 +180,8 @@
                             alt="Example 2">
                         </div>
                         <div class="example__descripton">
-                            <h1 class="example__title">Lorem.</h1>
-                            <p class="example__paragraph">Lorem, ipsum.</p>
+                            <h1 class="example__title">Nutrición</h1>
+                            <p class="example__paragraph">Aprende a comer mejor.</p>
                         </div>
                         <div class="example__social">
                             <div class="social__face">
@@ -197,8 +205,8 @@
                                 alt="Example 3">
                         </div>
                         <div class="example__descripton">
-                            <h1 class="example__title">Lorem.</h1>
-                            <p class="example__paragraph">Lorem, ipsum.</p>
+                            <h1 class="example__title">Ejercicio</h1>
+                            <p class="example__paragraph">Adquiere el hábito de ejercitarte.</p>
                         </div>
                         <div class="example__social">
                             <div class="social__face">
@@ -245,7 +253,7 @@
                     </div>
 
                     <div class="discover__fig">
-                        <a href="#">
+                        <a target="_blank" rel="noopener noreferrer"  href="https://bit.ly/3n3Oy50">
                             <img src="./assets/static/vitality-discover.png"
                                 alt="discover image">
                         </a>
@@ -300,7 +308,7 @@
                     <div class="services__element">
                         <h3 class="element__title">
                             <span><img src="https://img.icons8.com/ios-filled/50/000000/fit.png" alt=""></span>
-                            Service 4
+                            Definición de objetivos
                         </h3>
                         <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
                             maiores aliquid eum distinctio et, dolorum enim?</p>
@@ -309,10 +317,11 @@
                         <h3 class="element__title">
                             <span><img src="https://img.icons8.com/material/24/000000/meditation-guru.png"
                                     alt=""></span>
-                            Service 5
+                            Analisis de Entorno
                         </h3>
-                        <p class="element__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione
-                            maiores aliquid eum distinctio et, dolorum enim?</p>
+                        <p class="element__paragraph">
+                            Evaluación de fortalezas y debilidades, relacionacionadas con la ocupación y familia.
+                        </p>
                     </div>
                     <div class="services__element">
                         <h3 class="element__title">
@@ -491,7 +500,14 @@
     </script>
 
     <script>
-
+        function hamMenu_itemClick() {
+            var nav = document.getElementById("menu-nav");
+            setTimeout(function() {
+                if (nav.className !== "menu__nav") {
+                    nav.className = "menu__nav";
+                }
+            },100)
+        }
         function hamMenu() {
             var j;
             var nav = document.getElementById("menu-nav");
