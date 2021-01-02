@@ -563,7 +563,7 @@ body{
     display: relative;
     width: 100%;
     height: 300px;
-    background: url(https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg);
+    background: url(../static/vitality-img-facts.jpg);
     background-size: cover;
     margin-bottom: 40px;
 }
@@ -653,7 +653,7 @@ body{
     display: relative;
     width: 100%;
     height: 300px;
-    background: url(https://images.pexels.com/photos/3742711/pexels-photo-3742711.jpeg);
+    background: url(../static/vitality-img-mind.jpg);
     background-size: cover;
     margin-bottom: 40px;
 }
@@ -700,11 +700,10 @@ body{
 
 .contacts__direct {
     position: relative;
+    /* display: flex;
+    flex-direction: column; */
     margin: 10px 0;
     margin-right: 20px;
-    /* text-align: justify; */
-    
-
 }
 
 .contacts__direct ul {
@@ -716,8 +715,18 @@ body{
     font-weight: bold;
 }
 
+.contacts__direct a {
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+}
+
+.contacts__direct img {
+    vertical-align: middle;
+    height: 20px;
+}
+
 .contacts__direct span {
-    color: gray;
+    text-align: center;
 }
 
 .direct__paragraph {
@@ -726,6 +735,7 @@ body{
 
 .contacts__form {
     position: relative;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -775,12 +785,28 @@ body{
         max-width: 80%;
     }
 
+    .contacts__direct {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacts__form {
+        width: 100%;
+    }
+
+    .form__title {
+        text-align: center;
+    }
+
+    .form__description{
+        text-align: center;
+    }
 }
 
 
 
 .footer__container {
-    background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,1) 100% );
+    /* background: linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(255,255,255,1) 100% ); */
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -788,24 +814,26 @@ body{
     align-items: center;
     margin: 0 auto;
     padding-top: 20px;
+    border-top: 3px solid rgb(235, 234, 234);
     /* padding: 20px 0; */
 } 
 
 .footer__top {
+    color: gray;
     position: relative;
     width: 80%;
-    height: 100px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    /* align-items: center; */
     margin-bottom: 20px;
 }
 
 .footer__motivation {
+    position: relative;
+    text-align: center;
     width: 300px;
-    margin: 0 20px;
-    justify-self: flex-start;
+    margin: 20px 20px;
+    justify-self: flex-end;
 }
 
 .motivation__title {
@@ -813,8 +841,9 @@ body{
 }
 
 .footer__social {
+    text-align: center;
     width: 300px;
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
 .social__title {
@@ -834,41 +863,98 @@ body{
     color: gray;
 }
 
-.social__links a:hover{
-    text-decoration: underline;
+.social__links img {
+    vertical-align: middle;
+    height: 20px;
 }
+
+
 
 .footer__contacts {
     width: 300px;
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
 .contacts-footer__title {
+    text-align: center;
     margin-bottom: 10px;
 }
 
-.footer__bottom {
-    background: linear-gradient(to bottom, rgba(168, 168, 168,0) 0%, rgb(107, 107, 107) 100% );
-    margin-top: 20px;
-    position: relative;
-    width: 80%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    width: 100%;
-
+.contacts__items {
+    text-align: center;
+    list-style-type: none;
 }
 
-.footer__bottom a{
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    padding-left: 30px;
+.contacts__items li {
+    margin: 10px 0;
+}
+
+.contacts__items a{
     text-decoration: none;
+    color: gray;
 }
 
-.footer__bottom a:hover{
-    text-decoration: underline;
+.contacts__items img {
+    vertical-align: middle;
+    height: 20px;
 }
 
+.footer__bottom {
+    /* background: linear-gradient(to bottom, rgba(168, 168, 168,0) 0%, rgb(107, 107, 107) 100% ); */
+    background-color: rgb(175, 175, 175);
+    padding: 5px 0;
+    width: 100%;
+    /* height: 60px; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.bottom__copring {
+    margin: 2px;
+    position: relative;
+    width: 50%;
+    text-align: center;
+}
+
+.bottom__copring span {
+    font-family: 'AmazingKids','Dosis', sans-serif;
+    letter-spacing: 2px;
+} 
+
+.bottom__made {
+    margin: 2px;
+    position: relative;
+    width: 50%;
+    text-align: center;
+    letter-spacing: 1px;
+
+}
+
+.bottom__made img {
+    vertical-align: middle;
+    height: 20px;
+}
+
+@media screen and (max-width: 900px) {
+    .footer__top{
+        flex-wrap: wrap;
+    }   
+
+    .footer__motivation {
+        width: 100%;
+    }
+
+    .footer__bottom{
+        flex-wrap: wrap;
+    }
+
+    .bottom__copring {
+        width: 100%;
+    }
+
+    .bottom__made {
+        width: 100%;
+    }
+}
