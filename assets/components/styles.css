@@ -860,7 +860,7 @@ body{
 @media screen and (max-width: 900px) {
     .contacts__info {
         flex-wrap: wrap;
-        max-width: 80%;
+        width: 90%;
     }
 
     .contacts__direct {
@@ -875,10 +875,12 @@ body{
     }
     .form__googleContainer {
         width: 100%;
+        height: 1200px;
     }
     
     .form__googleContact {
         width: 100%;
+        height: 1200px;
     }
 
     .contacts__form {
