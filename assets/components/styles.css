@@ -11,6 +11,10 @@ body{
     font-family: 'Dosis', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'AmazingKids';
     src: url('../static/fonts/AmazingKids.eot'); /* IE9 Compat Modes */
