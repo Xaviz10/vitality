@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en,es">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="More Vitality" content="More Vitality desarrolla programas personalizados 
+    <meta name="description" content="More Vitality desarrolla programas personalizados 
     para reforzar y cultivar nuevos hábitos saludables teniendo en cuenta el entorno 
     ocupacional y familiar de cada paciente."> <!-- Important for the Google Results-->
     <meta name="robots" content="index,follow">
@@ -23,7 +23,7 @@
     <title>More Vitality</title>
 
     <link rel="icon" type="image/png" href="./assets/static/vitality-favicon.png"/>
-    <link rel="stylesheet" href="./assets/components/styles.css ">
+    <link rel="stylesheet" href="./assets/components/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
 </head>
@@ -39,27 +39,27 @@
                 </div>
                 <div class="menu__options">
                     <nav>
-                        <a class="menu__button" id="hamBtn" href="javascript:void(0);" onclick="hamMenu()">
+                        <a class="menu__button" id="hamBtn" href="javascript:void(0);">
                             <img src="./assets/static/icon-menu.png" alt="Menu">
                         </a>
                         <ul class="menu__nav" id="menu-nav">
                             <li>
-                                <a href="#about" onclick="hamMenu_itemClick()">
+                                <a href="#about">
                                     Acerca
                                 </a>
                             </li>
                             <li>
-                                <a href="#discover" onclick="hamMenu_itemClick()">
+                                <a href="#discover">
                                     Descubre
                                 </a>
                             </li>
                             <li>
-                                <a href="#services" onclick="hamMenu_itemClick()">
+                                <a href="#services">
                                     Servicios
                                 </a>
                             </li>
                             <li>
-                                <a href="#contacts" onclick="hamMenu_itemClick()">
+                                <a href="#contacts">
                                     Contactos
                                 </a>
                             </li>
@@ -74,7 +74,7 @@
         <section id="home">
             <div class="mainSlider">
                 <ul class="sliders">
-                    <li class="sliders__item sliders__item--fadding">
+                    <li class="sliders__item">
                         <img src="./assets/static/vitality-sliders-food.jpg" alt="firstImage">
                         <div class="sliders__caption">
                             <h1>
@@ -86,7 +86,7 @@
                             </h1>
                         </div>
                     </li>
-                    <li class="sliders__item sliders__item--fadding">
+                    <li class="sliders__item">
                         <img src="./assets/static/vitality-sliders-bed.jpg" alt="secondImage">
                         <div class="sliders__caption">
                             <h1>
@@ -97,7 +97,7 @@
                             </h1>
                         </div>
                     </li>
-                    <li class="sliders__item sliders__item--fadding">
+                    <li class="sliders__item">
                         <img src="./assets/static/vitality-sliders-fit.jpg" alt="thridImage">
                         <div class="sliders__caption">
                             <h1>
@@ -110,20 +110,6 @@
                         </div>
                     </li>
                 </ul>
-
-                <!-- <ul class="sliders-flex">
-                    <li>
-                        <a class="flex__left" onclick="plusDivs(-1)">
-                            <img src="./assets/static/vitality-arrowLeft.png" alt="Flex Left">
-                        </a>
-                    </li>
-                    <li>
-                        <a class="flex__right" onclick="plusDivs(+1)">
-                            <img src="./assets/static/vitality-arrowRight.png" alt="Flex Right">
-                        </a>
-                    </li>
-
-                </ul> -->
             </div>
         </section>
 
@@ -556,99 +542,8 @@
         </div>
         
     </footer>
-
-
-    <script>
-        // var slideIndex = 1;
-        // showDivs(slideIndex);
-
-        // function plusDivs(n) {
-        //     showDivs(slideIndex += n);
-        // }
-
-        // function showDivs(n) {
-        //     var i;
-        //     var x = document.getElementsByClassName("sliders__item");
-        //     if (n > x.length) { slideIndex = 1 }
-        //     if (n < 1) { slideIndex = x.length }
-        //     for (i = 0; i < x.length; i++) {
-        //         x[i].style.display = "none";
-        //     }
-        //     x[slideIndex - 1].style.display = "block";
-        //     setTimeout(showDivs(n), 5000);
-
-        // }
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("sliders__item");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-
-            setTimeout(carousel, 5000);
-        }
-    </script>
-
-    <script>
-        function hamMenu_itemClick() {
-            var nav = document.getElementById("menu-nav");
-            setTimeout(function() {
-                if (nav.className !== "menu__nav") {
-                    nav.className = "menu__nav";
-                }
-            },100)
-        }
-        function hamMenu() {
-            var j;
-            var nav = document.getElementById("menu-nav");
-            console.log(nav);
-
-            if (nav.className === "menu__nav") {
-                nav.className += " responsive";
-            } else {
-                nav.className = "menu__nav";
-            }
-
-            // if (item[0].style.display === "none") {
-            //     nav[0].style.height = "auto";
-            //     for (j = 0; j < item.length; j++) {
-            //         console.log(item[j])
-            //         item[j].style.display = "block";
-            //     }
-            // } else {
-            //     nav[0].style.height = "0";
-            //     for (j = 0; j < item.length; j++) {
-            //         item[j].style.display = "none";
-            //     }
-            // }
-            // if (item.className)
-        }
-    </script>
-    <!-- <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("sliders__item");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-
-            }
-            myIndex++;
-            if (myIndex > x.length) { myIndex = 1 }
-            x[myIndex - 1].style.display = "block";
-
-            setTimeout(carousel, 5000);
-        }
-    </script> -->
+    
+    <script src="./main.js" defer></script>
 </body>
 
 </html>

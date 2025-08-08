@@ -15,6 +15,11 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    /* Add padding to offset the fixed header's height */
+    padding-top: 60px; 
+}
+
 @font-face {
     font-family: 'AmazingKids';
     src: url('../static/fonts/AmazingKids.eot'); /* IE9 Compat Modes */
@@ -92,6 +97,12 @@ html {
     font-weight: bold;
 }
 
+.menu__nav a.active {
+    font-family: 'AmazingKids','Dosis', sans-serif;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
 .menu__nav li{
     display: flex;
     justify-content: center;
@@ -142,10 +153,13 @@ html {
     }
 
     .menu__nav {
-        height: 0;
+        width: 100%;
+        flex-direction: column;
         float: left;
-        display: none;
-
+        /* Add transition for smooth slide */
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease-in-out;
     }
 
     .menu__nav li{
@@ -159,9 +173,8 @@ html {
     }
 
     .menu__nav.responsive {
-        height: auto;
-        display: flex;
-        flex-direction: column;
+        /* A height large enough to show all menu items */
+        max-height: 300px; 
     }
 }
 
@@ -174,9 +187,18 @@ html {
     /* margin: 60px auto 0; */
 }
 
+.sliders {
+    position: relative;
+    list-style-type: none;
+    /* Prevents content layout shift while images load */
+    aspect-ratio: 16 / 9;
+    overflow: hidden; /* Hide slides that are off-screen */
+}
+
 .sliders img {
-    height: auto;
-    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
     opacity: 0.85;
     
 }
@@ -210,40 +232,25 @@ html {
 
 
 .sliders__item {
-    display: none;
-    -webkit-animation-name: fade-out;
-	-webkit-animation-duration: 3s;
-	animation-name: fade-out;
-	animation-duration: 3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Default state: off-screen to the right */
+    transform: translateX(100%);
+    transition: transform 1s ease-in-out;
 }
 
-@-webkit-keyframes fade-out {
-	from {opacity: 1}
-	to {opacity: .5}
+.sliders__item--visible {
+    /* Active state: slide to center */
+    transform: translateX(0);
 }
-
-@keyframes fade-out {
-	from {opacity: 1}
-	to {opacity: .5}
+.sliders__item--leaving {
+    /* Outgoing state: slide to left */
+    transform: translateX(-100%);
 }
-
-.sliders__item--fadding {
-    -webkit-animation-name: fade;
-	-webkit-animation-duration: 3s;
-	animation-name: fade;
-	animation-duration: 3s;
-}
-
-@-webkit-keyframes fade {
-	from {opacity: .5}
-	to {opacity: 1}
-}
-
-@keyframes fade {
-	from {opacity: .5}
-	to {opacity: 1}
-}
-/* 
+/*
 .sliders-flex{
     width: 100%;
     height: 120px;
